@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 5 Sample App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      :root {
+        --primary: #4f46e5;
+        --primary-dark: #3730a3;
+        --secondary: #0f172a;
+        --muted: #64748b;
+        --light-bg: #f8fafc;
+        --card-bg: #ffffff;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--secondary);
+        background: linear-gradient(180deg, #eef2ff 0%, #ffffff 30%, #f8fafc 100%);
+      }
+
+      .navbar {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      }
+
+      .brand-badge {
+        width: 38px;
+        height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--primary), #7c3aed);
+        color: white;
+        font-weight: 700;
+      }
+
+      .hero {
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 4vw, 4.5rem);
+        line-height: 1.1;
+        font-weight: 800;
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, var(--primary), #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .section-title {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+
+      .section-subtitle {
+        color: var(--muted);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .feature-card,
+      .pricing-card,
+      .testimonial-card {
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      }
+
+      .feature-card {
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .icon-wrap {
+        width: 3rem;
+        height: 3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.85rem;
+        background: rgba(79, 70, 229, 0.12);
+        color: var(--primary);
+        font-size: 1.25rem;
+      }
+
+      .pricing-card.featured {
+        border: 2px solid rgba(79, 70, 229, 0.4);
+        transform: translateY(-6px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), #7c3aed);
+        border: none;
+        box-shadow: 0 10px 22px rgba(79, 70, 229, 0.25);
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(135deg, var(--primary-dark), #6d28d9);
+      }
+
+      .btn-outline-primary {
+        border-color: rgba(79, 70, 229, 0.35);
+        color: var(--primary);
+      }
+
+      .btn-outline-primary:hover {
+        background: var(--primary);
+        color: white;
+      }
+
+      .stats-item {
+        padding: 1rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+      }
+
+      .testimonial-card {
+        background: white;
+        padding: 1.5rem;
+      }
+
+      footer {
+        background: #0f172a;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container py-3">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+          <span class="brand-badge">B</span>
+          BootstrapLab
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+            <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="#contact">Get started</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <span class="badge bg-primary-subtle text-primary-emphasis px-3 py-2 rounded-pill mb-3">Built for modern teams</span>
+              <h1>Launch faster with a <span class="text-gradient">beautiful product</span> experience.</h1>
+              <p class="lead text-secondary mt-4">Create polished digital experiences with a crisp design system, conversion-ready layouts, and ready-to-use components.</p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a href="#pricing" class="btn btn-primary btn-lg px-4">Start free</a>
+                <a href="#features" class="btn btn-outline-primary btn-lg px-4">Explore features</a>
+              </div>
+              <div class="d-flex gap-4 mt-5 flex-wrap">
+                <div class="stats-item">
+                  <div class="fs-3 fw-bold">12k+</div>
+                  <div class="text-muted">Active users</div>
+                </div>
+                <div class="stats-item">
+                  <div class="fs-3 fw-bold">4.9/5</div>
+                  <div class="text-muted">Average rating</div>
+                </div>
+                <div class="stats-item">
+                  <div class="fs-3 fw-bold">2.4x</div>
+                  <div class="text-muted">Faster launches</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="card-body p-0">
+                  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Team planning" class="img-fluid w-100" style="height: 560px; object-fit: cover;" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title display-6">Everything you need to grow</h2>
+            <p class="section-subtitle">Simple features designed to keep your team efficient and your customers impressed.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+              <div class="feature-card h-100">
+                <div class="icon-wrap mb-3"><i class="bi bi-rocket-takeoff"></i></div>
+                <h4>Fast onboarding</h4>
+                <p class="text-muted mb-0">Launch new workflows in minutes with reusable layouts and automation-friendly patterns.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="feature-card h-100">
+                <div class="icon-wrap mb-3"><i class="bi bi-bar-chart"></i></div>
+                <h4>Insightful analytics</h4>
+                <p class="text-muted mb-0">Track performance with clear dashboards and conversion-focused reporting.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="feature-card h-100">
+                <div class="icon-wrap mb-3"><i class="bi bi-shield-check"></i></div>
+                <h4>Secure by default</h4>
+                <p class="text-muted mb-0">Enterprise-grade protection and trustworthy workflows built directly into the stack.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="feature-card h-100">
+                <div class="icon-wrap mb-3"><i class="bi bi-people"></i></div>
+                <h4>Collaboration ready</h4>
+                <p class="text-muted mb-0">Keep stakeholders aligned with shared dashboards, comments, and approval flows.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-white">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Dashboard overview" class="img-fluid rounded-4 shadow-lg" />
+            </div>
+            <div class="col-lg-6">
+              <h2 class="section-title display-6">Designed for clarity, built for momentum.</h2>
+              <p class="text-muted">Whether you're building a startup app or scaling a customer portal, the experience remains polished, fast, and easy to trust.</p>
+              <ul class="list-group list-group-flush mt-4">
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Responsive dashboard layouts</li>
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Modern marketing and launch pages</li>
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Flexible components for product teams</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title display-6">Simple pricing</h2>
+            <p class="section-subtitle">Choose the plan that matches your current stage.</p>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="pricing-card h-100 p-4 bg-white">
+                <p class="text-uppercase text-muted small fw-semibold mb-3">Starter</p>
+                <h3 class="display-6 fw-bold">$19</h3>
+                <p class="text-muted">Per month</p>
+                <ul class="list-unstyled mt-4">
+                  <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>3 active projects</li>
+                  <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Email support</li>
+                  <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Basic analytics</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline-primary w-100 mt-4">Choose starter</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="pricing-card featured h-100 p-4 bg-white position-relative">
+                <span class="badge bg-primary position-absolute top-0 start-50 translate-middle">Popular</span>
+                <p class="text-uppercase text-muted small fw-semibold mb-3">Growth</p>
+                <h3 class="display-6 fw-bold">$49</h3>
+                <p class="text-muted">Per month</p>
+                <ul class="list-unstyled mt-4">
+                  <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Unlimited projects</li>
+                  <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Priority support</li>
+                  <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Advanced automation</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary w-100 mt-4">Choose growth</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="pricing-card h-100 p-4 bg-white">
+                <p class="text-uppercase text-muted small fw-semibold mb-3">Scale</p>
+                <h3 class="display-6 fw-bold">$99</h3>
+                <p class="text-muted">Per month</p>
+                <ul class="list-unstyled mt-4">
+                  <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Custom onboarding</li>
+                  <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Dedicated success team</li>
+                  <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Custom integrations</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline-primary w-100 mt-4">Talk to sales</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title display-6">Loved by product teams</h2>
+            <p class="section-subtitle">Teams use BootstrapLab to turn rough ideas into polished customer journeys.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="testimonial-card h-100">
+                <div class="text-warning mb-3">★★★★★</div>
+                <p class="mb-4">"It gave us a modern interface without the long design cycle. Our team shipped three features in the first week."</p>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Customer portrait" class="rounded-circle" width="48" height="48" />
+                  <div>
+                    <div class="fw-semibold">Rina Patel</div>
+                    <small class="text-muted">Product Lead</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-card h-100">
+                <div class="text-warning mb-3">★★★★★</div>
+                <p class="mb-4">"The layouts feel premium and conversion-ready. Our sign-up conversion improved within the first month."</p>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Customer portrait" class="rounded-circle" width="48" height="48" />
+                  <div>
+                    <div class="fw-semibold">Marcus Lee</div>
+                    <small class="text-muted">Growth Manager</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-card h-100">
+                <div class="text-warning mb-3">★★★★★</div>
+                <p class="mb-4">"It feels like a complete product story: clear UX, strong conversion paths, and a very easy setup."</p>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&q=80" alt="Customer portrait" class="rounded-circle" width="48" height="48" />
+                  <div>
+                    <div class="fw-semibold">Chloe Nguyen</div>
+                    <small class="text-muted">Founder</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <h2 class="section-title display-6">Ready to build your next win?</h2>
+              <p class="text-muted">Tell us a little about your goals and we'll help shape the right plan for your team.</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="card border-0 shadow-lg rounded-4 p-4 bg-white">
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Project details</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your product or team"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Book a demo</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4">
+      <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row gap-3">
+        <div class="fw-semibold">© 2026 BootstrapLab</div>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white-50 text-decoration-none">Privacy</a>
+          <a href="#" class="text-white-50 text-decoration-none">Terms</a>
+          <a href="#" class="text-white-50 text-decoration-none">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
