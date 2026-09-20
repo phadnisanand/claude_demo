@@ -1,0 +1,177 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "B BootstrapLab" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e5]: B
+        - text: BootstrapLab
+      - button [ref=e6] [cursor=pointer]
+  - main [ref=e8]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]: Built for modern teams
+        - heading "Launch faster with a beautiful product experience." [level=1] [ref=e14]
+        - paragraph [ref=e15]: Create polished digital experiences with a crisp design system, conversion-ready layouts, and ready-to-use components.
+        - generic [ref=e16]:
+          - link "Start free" [ref=e17] [cursor=pointer]:
+            - /url: "#pricing"
+          - link "Explore features" [ref=e18] [cursor=pointer]:
+            - /url: "#features"
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: 12k+
+            - generic [ref=e22]: Active users
+          - generic [ref=e23]:
+            - generic [ref=e24]: 4.9/5
+            - generic [ref=e25]: Average rating
+          - generic [ref=e26]:
+            - generic [ref=e27]: 2.4x
+            - generic [ref=e28]: Faster launches
+      - img "Team planning" [ref=e32]
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - heading "Everything you need to grow" [level=2] [ref=e36]
+        - paragraph [ref=e37]: Simple features designed to keep your team efficient and your customers impressed.
+      - generic [ref=e38]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: 
+          - heading "Fast onboarding" [level=4] [ref=e43]
+          - paragraph [ref=e44]: Launch new workflows in minutes with reusable layouts and automation-friendly patterns.
+        - generic [ref=e46]:
+          - generic [ref=e47]: 
+          - heading "Insightful analytics" [level=4] [ref=e49]
+          - paragraph [ref=e50]: Track performance with clear dashboards and conversion-focused reporting.
+        - generic [ref=e52]:
+          - generic [ref=e53]: 
+          - heading "Secure by default" [level=4] [ref=e55]
+          - paragraph [ref=e56]: Enterprise-grade protection and trustworthy workflows built directly into the stack.
+        - generic [ref=e58]:
+          - generic [ref=e59]: 
+          - heading "Collaboration ready" [level=4] [ref=e61]
+          - paragraph [ref=e62]: Keep stakeholders aligned with shared dashboards, comments, and approval flows.
+    - generic [ref=e65]:
+      - img "Dashboard overview" [ref=e67]
+      - generic [ref=e68]:
+        - heading "Designed for clarity, built for momentum." [level=2] [ref=e69]
+        - paragraph [ref=e70]: Whether you're building a startup app or scaling a customer portal, the experience remains polished, fast, and easy to trust.
+        - list [ref=e71]:
+          - listitem [ref=e72]:
+            - generic [ref=e73]: 
+            - text: Responsive dashboard layouts
+          - listitem [ref=e74]:
+            - generic [ref=e75]: 
+            - text: Modern marketing and launch pages
+          - listitem [ref=e76]:
+            - generic [ref=e77]: 
+            - text: Flexible components for product teams
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - heading "Simple pricing" [level=2] [ref=e81]
+        - paragraph [ref=e82]: Choose the plan that matches your current stage.
+      - generic [ref=e83]:
+        - generic [ref=e85]:
+          - paragraph [ref=e86]: Starter
+          - heading "$19" [level=3] [ref=e87]
+          - paragraph [ref=e88]: Per month
+          - list [ref=e89]:
+            - listitem [ref=e90]:
+              - generic [ref=e91]: 
+              - text: 3 active projects
+            - listitem [ref=e92]:
+              - generic [ref=e93]: 
+              - text: Email support
+            - listitem [ref=e94]:
+              - generic [ref=e95]: 
+              - text: Basic analytics
+          - link "Choose starter" [ref=e96] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e98]:
+          - generic [ref=e99]: Popular
+          - paragraph [ref=e100]: Growth
+          - heading "$49" [level=3] [ref=e101]
+          - paragraph [ref=e102]: Per month
+          - list [ref=e103]:
+            - listitem [ref=e104]:
+              - generic [ref=e105]: 
+              - text: Unlimited projects
+            - listitem [ref=e106]:
+              - generic [ref=e107]: 
+              - text: Priority support
+            - listitem [ref=e108]:
+              - generic [ref=e109]: 
+              - text: Advanced automation
+          - link "Choose growth" [ref=e110] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e112]:
+          - paragraph [ref=e113]: Scale
+          - heading "$99" [level=3] [ref=e114]
+          - paragraph [ref=e115]: Per month
+          - list [ref=e116]:
+            - listitem [ref=e117]:
+              - generic [ref=e118]: 
+              - text: Custom onboarding
+            - listitem [ref=e119]:
+              - generic [ref=e120]: 
+              - text: Dedicated success team
+            - listitem [ref=e121]:
+              - generic [ref=e122]: 
+              - text: Custom integrations
+          - link "Talk to sales" [ref=e123] [cursor=pointer]:
+            - /url: "#contact"
+    - generic [ref=e125]:
+      - generic [ref=e126]:
+        - heading "Loved by product teams" [level=2] [ref=e127]
+        - paragraph [ref=e128]: Teams use BootstrapLab to turn rough ideas into polished customer journeys.
+      - generic [ref=e129]:
+        - generic [ref=e131]:
+          - generic [ref=e132]: ★★★★★
+          - paragraph [ref=e133]: "\"It gave us a modern interface without the long design cycle. Our team shipped three features in the first week.\""
+          - generic [ref=e134]:
+            - img "Customer portrait" [ref=e135]
+            - generic [ref=e136]:
+              - generic [ref=e137]: Rina Patel
+              - text: Product Lead
+        - generic [ref=e139]:
+          - generic [ref=e140]: ★★★★★
+          - paragraph [ref=e141]: "\"The layouts feel premium and conversion-ready. Our sign-up conversion improved within the first month.\""
+          - generic [ref=e142]:
+            - img "Customer portrait" [ref=e143]
+            - generic [ref=e144]:
+              - generic [ref=e145]: Marcus Lee
+              - text: Growth Manager
+        - generic [ref=e147]:
+          - generic [ref=e148]: ★★★★★
+          - paragraph [ref=e149]: "\"It feels like a complete product story: clear UX, strong conversion paths, and a very easy setup.\""
+          - generic [ref=e150]:
+            - img "Customer portrait" [ref=e151]
+            - generic [ref=e152]:
+              - generic [ref=e153]: Chloe Nguyen
+              - text: Founder
+    - generic [ref=e156]:
+      - generic [ref=e157]:
+        - heading "Ready to build your next win?" [level=2] [ref=e158]
+        - paragraph [ref=e159]: Tell us a little about your goals and we'll help shape the right plan for your team.
+      - generic [ref=e162]:
+        - generic [ref=e163]:
+          - generic [ref=e164]: Full name
+          - textbox "Full name" [ref=e165]:
+            - /placeholder: Your name
+        - generic [ref=e166]:
+          - generic [ref=e167]: Email address
+          - textbox "Email address" [ref=e168]:
+            - /placeholder: name@example.com
+        - generic [ref=e169]:
+          - generic [ref=e170]: Project details
+          - textbox "Project details" [ref=e171]:
+            - /placeholder: Tell us about your product or team
+        - button "Book a demo" [ref=e172] [cursor=pointer]
+  - contentinfo [ref=e173]:
+    - generic [ref=e174]:
+      - generic [ref=e175]: © 2026 BootstrapLab
+      - generic [ref=e176]:
+        - link "Privacy" [ref=e177] [cursor=pointer]:
+          - /url: "#"
+        - link "Terms" [ref=e178] [cursor=pointer]:
+          - /url: "#"
+        - link "Contact" [ref=e179] [cursor=pointer]:
+          - /url: "#"
