@@ -2,78 +2,71 @@
 
 ## Project overview
 
-This repository contains a single-page Bootstrap 5 marketing/demo application. The page is currently static HTML rather than a Drupal theme or a package-managed application.
+This repository is a static Bootstrap 5 marketing landing page demo. The app is intentionally front-end only: it is served as plain HTML and CSS, without a framework, package manager, or build pipeline.
 
 ## Repository structure
 
-- `sample.html` - Main landing page and all page styling.
-- `README.md` - Repository note indicating that the file is read-only.
-- `.claude/mcp.json` - GitHub and Playwright MCP server configuration.
+- `sample.html` — complete landing page, CSS, and Bootstrap configuration
+- `README.md` — project summary and local run instructions
+- `.claude/mcp.json` — MCP configuration for GitHub and browser automation tools
 
-The old `sample` text file was replaced by `sample.html`.
+## Local development
 
-## Running locally
-
-There is no `package.json`, build step, or test runner. Serve the repository over HTTP so browser behavior and external assets work correctly:
+Serve the site over HTTP so the browser can load external assets correctly:
 
 ```powershell
 python -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open:
+Then open:
 
 ```text
 http://127.0.0.1:8000/sample.html
 ```
 
-Stop the server with `Ctrl+C`.
+To stop the server, press `Ctrl+C` in the terminal.
 
-## Browser validation
-
-The repository configures Playwright MCP in `.claude/mcp.json`:
-
-- GitHub MCP: `https://api.githubcopilot.com/mcp`
-- Playwright MCP: `npx @playwright/mcp@latest`
-
-When validating UI changes, check at least:
-
-- Desktop rendering around 1440px wide.
-- Mobile rendering around 375px wide.
-- Mobile navigation toggle and anchor links.
-- Image loading and browser console errors.
-- Contact form behavior.
-- Horizontal overflow and basic accessibility-tree output.
-
-Generated Playwright logs and screenshots should remain local and should not be committed unless explicitly requested.
-
-## Page content
+## Page features
 
 `sample.html` includes:
 
-- Responsive Bootstrap navigation.
-- Hero section with primary calls to action.
-- Features section.
-- Product/value proposition section.
-- Starter, Growth, and Scale pricing cards.
-- Testimonials section.
-- Contact/demo form.
-- Footer links.
+- Responsive Bootstrap navigation
+- Hero section with CTAs and stat cards
+- Features grid
+- Product/value proposition section
+- Pricing cards for Starter, Growth, and Scale
+- Testimonials section
+- Contact/demo form
+- Footer links
 
-Bootstrap 5.3.3, Bootstrap Icons 1.11.3, Inter font files, and Unsplash images are loaded from external CDNs/URLs.
+The page pulls Bootstrap 5.3.3, Bootstrap Icons, Inter fonts, and Unsplash images from public CDNs.
 
-## Current known issues
+## Validation checklist
 
-- The contact form has no backend endpoint or submit handler. It currently submits as a default `GET` request to the same page.
-- Contact fields do not have `name` attributes and are not marked `required`.
-- The mobile navigation button should have an accessible label and explicit `aria-controls`.
-- `/favicon.ico` is not present, which produces a browser 404 when served locally.
-- External CDN/image dependencies should be reviewed before production deployment.
-- Sample statistics, testimonials, and security claims should be replaced with verified product data.
+After making UI changes, validate at least the following with a browser or Playwright MCP:
 
-## Change guidelines
+- Desktop rendering around 1440px
+- Mobile rendering around 375px
+- Mobile navigation toggling and anchor-link behavior
+- Image loading and browser console errors
+- Contact form behavior and expected feedback
+- Horizontal overflow and accessibility basics
 
-- Keep the page accessible and responsive.
+Do not commit generated browser artifacts such as screenshots or Playwright output unless explicitly requested.
+
+## Known issues and guardrails
+
+- The contact form currently has no backend endpoint or submit handling.
+- Form fields should include `name` values and `required` attributes where appropriate.
+- The mobile navigation button should include an accessible label and `aria-controls`.
+- A favicon is not provided, which can trigger a 404 when served locally.
+- External CDN and image dependencies should be reviewed before production deployment.
+- Product claims, statistics, and testimonials should be replaced with verified business data before going live.
+
+## Change guidance
+
+- Keep the page accessible, responsive, and semantic.
 - Preserve existing Bootstrap conventions and in-page anchor IDs.
-- Prefer semantic HTML, explicit form metadata, and visible success/error states.
-- Avoid committing generated browser artifacts such as `.playwright-mcp/`, `landing-desktop.png`, or `landing-mobile.png`.
-- After UI changes, serve the page locally and validate it with Playwright MCP at desktop and mobile sizes.
+- Prefer explicit form metadata and visible success/error states.
+- Avoid introducing build tooling unless the project requirements change.
+- Keep changes scoped to the static page unless additional product functionality is required.
